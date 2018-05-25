@@ -49,7 +49,7 @@ postPatterns: 'circuitBoard'
 # SNS settings 配置社交网站
 # url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
 sns:
-  weibo: '//weibo.com/youyefu'
+  weibo: '//weibo.com/1934846585'
   github: '//github.com/youyefu'
 
 # Tags 设置标签
