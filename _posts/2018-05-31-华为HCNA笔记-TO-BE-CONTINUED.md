@@ -162,6 +162,7 @@ CGMP
 
 ### STP原理与配置
 
+[生成树协议动画](https://youyefu.github.io/2018/05/31/STP%E7%94%9F%E6%88%90%E6%A0%91%E5%8D%8F%E8%AE%AE%E5%8A%A8%E7%94%BB%E6%BC%94%E7%A4%BA.html)
 ![](http://p94dvrayw.bkt.clouddn.com/18-5-31/35113339.jpg)
 
 多条路径可走：如果两个交换机 连了两根线，其中没有配置stp 泛洪的流量会来回跑，形成环路，变成广播风暴
