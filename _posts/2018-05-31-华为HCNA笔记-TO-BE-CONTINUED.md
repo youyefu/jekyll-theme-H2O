@@ -146,3 +146,99 @@ Reboot后要n y
 无分片转发：成功率较低，保证数据完整
 存储转发：查看帧的全部字段  ，存储后转发，对于qos支持好
 
+![](http://p94dvrayw.bkt.clouddn.com/18-5-31/25536444.jpg)
+例子：
+![](http://p94dvrayw.bkt.clouddn.com/18-5-31/98221752.jpg)
+Pc-a 要和pc-c通信 
+a通过广播的形式到交换机接口，交换机学习到a的mac地址 所属vlan 
+![](http://p94dvrayw.bkt.clouddn.com/18-5-31/32989956.jpg)
+![](http://p94dvrayw.bkt.clouddn.com/18-5-31/69428282.jpg)
+c接受到泛洪的数据 回复arp
+![](http://p94dvrayw.bkt.clouddn.com/18-5-31/86284366.jpg)
+以下三个监听协议协助泛洪：增强转发组播效率
+IGMP snooping
+IGMP snooping proxy
+CGMP
+
+### STP原理与配置
+
+![](http://p94dvrayw.bkt.clouddn.com/18-5-31/35113339.jpg)
+
+多条路径可走：如果两个交换机 连了两根线，其中没有配置stp 泛洪的流量会来回跑，形成环路，变成广播风暴
+![](http://p94dvrayw.bkt.clouddn.com/18-5-31/36290261.jpg)
+
+ Ieee 控制层面协议
+802.1d  stp 平时不用
+802.1w rstp 快速生成树 收敛速度快
+802.1s mstp/mist/mst 多进程生成树
+产生的报文叫BPDU
+![](http://p94dvrayw.bkt.clouddn.com/18-5-31/90194617.jpg)
+ 
+产生风暴最明显的特征是一个mac出现对应了多个端口
+![](http://p94dvrayw.bkt.clouddn.com/18-5-31/53015607.jpg)
+```flow
+生成树关注三点
+1如何确保阻塞的是不重要的路径
+2如何确保网络是通的
+3如果之前的线路有问题，怎么高校的切换路径
+```
+![](http://p94dvrayw.bkt.clouddn.com/18-5-31/11150174.jpg)
+
+跟桥（根交换机）：树根只有一个
+根与非根的路径是根端口
+R根端口 Dp指定端口 NDP非指定端口
+ 
+BPDU有两类
+1配置BPDU
+2tcn BPDU（特殊情况特殊需求下使用）
+ 
+802.3|BPDU|
+
+![](http://p94dvrayw.bkt.clouddn.com/18-5-31/61054400.jpg)
+
+Root id:根网桥的标识符
+2byte优先级字段 0-35535
+6byte mac地址
+Cost of path 路径开销 描述路径好坏的参数
+ 
+Stp过程
+1 接口没有运行stp down状态
+2 blocking 不能收发任何数据，接受BPDU 不能转发
+3 listening 不能收发任何数据，可以接受和转发bPDU
+4 learning 同上 且接收数据可以基于源mac地址进行mac地址表项的学习
+5 forwarding 可以任意收发数据流量 bpdu mac表项
+
+![](http://p94dvrayw.bkt.clouddn.com/18-5-31/37797412.jpg)
+
+1选跟桥 bid mac
+2根端口 rid cop bid pid 自身pid
+3指定端口 rid cop bid pid
+ 
+RSTP 原理和配置
+Stp是整体性收敛协议 RSTP两台交换机之间分段收敛 
+非指定端口分为backup 和alternate 
+RSTP边缘端口：
+![](http://p94dvrayw.bkt.clouddn.com/18-5-31/60335.jpg)
+![](http://p94dvrayw.bkt.clouddn.com/18-5-31/42773626.jpg)
+![](http://p94dvrayw.bkt.clouddn.com/18-5-31/3671235.jpg)
+Stp root p设置主根桥
+Stp root s 设置备份跟桥
+Stp port p设置主根端口
+Stp port s 设置备份根端口
+
+## 第七讲：Ip路由基础
+
+自治系统：autonomous system。在互联网中，一个自治系统(AS)是一个有权自主地决定在本系统中应采用何种路由协议的小型单位。这个网络单位可以是一个简单的网络也可以是一个由一个或多个普通的网络管理员来控制的网络群体，它是一个单独的可管理的网络单元（例如一所大学，一个企业或者一个公司个体）。一个自治系统有时也被称为是一个路由选择域（routing domain）。一个自治系统将会分配一个全局的唯一的16位号码，有时我们把这个号码叫做自治系统号（ASN） 
+
+一个自治系统就是处于一个管理机构控制之下的路由器和网络群组。它可以是一个路由器直接连接到一个LAN上，同时也连到Internet上；它可以是一个由企业骨干网互连的多个局域网。在一个自治系统中的所有路由器必须相互连接，运行相同的路由协议，同时分配同一个自治系统编号。自治系统之间的链接使用外部路由协议，例如BGP.。
+
+技术定义
+互联网协议指南给自治系统提出了如上的的定义后，又提出了一个更具有技术性的定义如下：
+
+一个自治系统即为由一个或多个网络运营商来运行一个或多个网络协议前缀的网络连接组合，这些运营商往往都具有单独的定义明确的路由策略
+
+1-64511 公有
+64512-65535私有
+ 
+静态路由基础：
+告诉指定地址该怎么走 不灵活
