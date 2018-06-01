@@ -12,7 +12,7 @@ nav:
   home: '/'
   tags: '/tags.html'
   archives: '/archives.html'
- 
+
 
 # Footer
 footer:
@@ -21,7 +21,7 @@ footer:
 # Author 配置博主信息
 author: '尤也夫'
 nickname: 'Observer'
-bio: '爱好广泛'
+bio: '大龄青年 文科僧 无神论者 豆腐脑吃咸'
 avatar: '/assets/img/profile.png'
 
 # Search
