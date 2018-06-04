@@ -53,6 +53,7 @@ postPatterns: 'circuitBoard'
 sns:
   weibo: '//weibo.com/1934846585'
   github: '//github.com/youyefu'
+  instagram: '//music.163.com/#/playlist?id=62269796'
 
 # Tags 设置标签
 recommend-tags: true # whether or not display recommend-tags on the sidebar
