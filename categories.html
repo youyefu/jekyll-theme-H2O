@@ -9,22 +9,22 @@ layout: default
     <h2>categories</h2>
 </div>
 
-<main class="categories-content">
+<main class="tags-content">
 
-    <ul class="categories-list">
+    <ul class="tags-list">
         <li>
         {% if site.recommend-categories and site.categories.size>0 %}
             {% for categories in site.categories %}
-            <a href="#{{ categories[0] }}" class="categories">{{ categories[0]}}</a>
+            <a href="#{{ categories[0] }}" class="tag">{{ categories[0]}}</a>
             {% endfor %}
         {% endif %}
         </li>
         
         {% for categories in site.categories %}
         <li>
-            <span class="categories-name" id="{{ categories[0] }}">「{{ categories[0] }}」</span>
+            <span class="tag-name" id="{{ categories[0] }}">「{{ categories[0] }}」</span>
             {% for post in categories[1] %}
-            <a class="categories-post" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+            <a class="tag-post" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
             {% endfor %}
         </li>
         {% endfor%}
