@@ -211,18 +211,17 @@ $(document).ready(function(){
     /**
      * Night mode
      */
-    function nightMode() {
+     function nightMode() {
         var el = $('body');
         var className = 'night-mode';
 
         var date = new Date();
         var hour = date.getHours();
 
-       
+        if ((hour >= 0 && hour <= 6) || hour === 22) {
             el.addClass(className);
-			alert(hour);
+        }
     }
-
     if ($('#nm-switch').val() === 'true') {
         nightMode();
     }
