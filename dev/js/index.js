@@ -218,7 +218,7 @@ $(document).ready(function(){
         var date = new Date();
         var hour = date.getHours();
 
-        if ((hour >= 0 && hour <= 6) || hour === 23) {
+        if ((hour >= 0 && hour <= 6) || £¨hour >= 21 && hour <= 23) ) {
             el.addClass(className);
         }
     }
@@ -231,7 +231,7 @@ $(document).ready(function(){
      * Copy and copyright
      */
     function setClipboardData(str) {
-        str += '\n\nè‘—ä½œæƒå½’ä½œè€…æ‰€æœ‰ã€‚\nå•†ä¸šè½¬è½½è¯·è”ç³»ä½œè€…èŽ·å¾—æŽˆæƒ,éžå•†ä¸šè½¬è½½è¯·æ³¨æ˜Žå‡ºå¤„ã€‚\nåŽŸæ–‡: ' + location.href;
+        str += '\n\nÖø×÷È¨¹é×÷ÕßËùÓÐ¡£\nÉÌÒµ×ªÔØÇëÁªÏµ×÷Õß»ñµÃÊÚÈ¨,·ÇÉÌÒµ×ªÔØÇë×¢Ã÷³ö´¦¡£\nÔ­ÎÄ: ' + location.href;
         $('.post-content').on('copy', function(e) {
             var data = window.clipboardData || e.originalEvent.clipboardData;
             data.setData('text/plain', str);

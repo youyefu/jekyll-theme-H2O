@@ -22,7 +22,7 @@ footer:
 # Author 配置博主信息
 author: '尤也夫'
 nickname: 'Observer'
-bio: '大龄青年 文科僧 无神论者 豆腐脑吃咸'
+bio: '大龄青年 文科僧 bodybuilding 无神论 宅 豆腐脑吃咸'
 avatar: '/assets/img/profile.png'
 
 # Search
@@ -34,7 +34,7 @@ nightMode: true
 # Comments 评论功能
 comments:
   disqus: true
-  disqus_url: 'https://youyefu.disqus.com/embed.js'
+  disqus_url: 'https://youyefu.disqus.com'
 
 # MathJax 公式支持 by Ray-Eldath
 mathjax: true
