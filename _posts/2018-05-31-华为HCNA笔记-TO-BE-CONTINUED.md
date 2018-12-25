@@ -15,7 +15,7 @@ tags: HCNA
 ### 数据包格式
 
 以太网头-ip头-icmp-fcs
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/57706916.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/57706916.jpg)
 
 ```flow
 Type表示消息类型
@@ -27,7 +27,7 @@ Checksum检验和  检测报文是否被篡改
 
 1测试连通性
 Ping：echo request  echo reply
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/45920494.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/45920494.jpg)
 2错误报告
 如上图，如不可达，会告诉你为什么不可达
 网络部可达：路由器没有去向目地网络的
@@ -37,7 +37,7 @@ Ping：echo request  echo reply
 
 ### Icmp重定向
 
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/36910573.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/36910573.jpg)
 
 如果访问服务器A本来第一跳是RTB 但RTB会重定向让PCa的第一跳直接跳到RTA
 
@@ -49,7 +49,7 @@ R1-R2
 在R1上ping
 Cisco：ping 2.2.2.2 source 1.1.1.1
 Huawei:ping -a 1.1.1.1 2.2.2.2
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/36118629.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/36118629.jpg)
 -t默认是 2000 毫秒 内如果应答了 就是ping 成功了 
 
 TraceRT 路由跟踪 比ping更好用更详细
@@ -57,7 +57,7 @@ TraceRT 路由跟踪 比ping更好用更详细
 ### ARP协议
 
 解决再以太网环境中 二三层映射问题 只能再ipv4环境下工作
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/72520255.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/72520255.jpg)
 Operation code 请求是1 应答是2
 
 ### Arp代理
@@ -67,8 +67,8 @@ Operation code 请求是1 应答是2
 
 原理是有路由器里的arp表回复给不同网段的arp请求
 路由器会假装是被访问的pc 回复arp
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/92724397.jpg)
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/18363688.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/92724397.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/18363688.jpg)
 功能：
 1检测地址冲突
 2 更新新ip地址arp映射
@@ -76,17 +76,17 @@ Operation code 请求是1 应答是2
 #### Arp攻击
 
 用第二特性实现的，攻击者利用其特性
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/88314754.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/88314754.jpg)
 
 ### 传输协议TCP UDP
 
 TCP面向连接的可靠协议 点到点协议 单播
 UDP无连接 尽力而为的协议
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/21266680.jpg)
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/50957191.jpg)
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/54820194.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/21266680.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/50957191.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/54820194.jpg)
 p.s. : Ddos 不断的更新ip后发送tcp 导致服务器内存满 
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/35540489.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/35540489.jpg)
 Udp没有序列 所以要使用 rtp实时传输协议 12byte
 比如voip就是用udp发送的，发送前经过四次封装
 Layer|ip|UDP|rtp|Voip
@@ -113,7 +113,7 @@ Mls3层
 非直连路由：
 1静态路由
 2动态路由选择协议 RIP EIGRP OSPF ISIS BGP	
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/51434180.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/51434180.jpg)
 Vty线路接口 远程登录 只有五个  只能有五个管理员进行远程登录
 user-interface vty 0 4 开启0-4 五个终端接口
 
@@ -126,13 +126,13 @@ Copy move rename
 Delete
 Undelete
 Reset recycle-bin
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/34961120.jpg)
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/88544074.jpg)
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/50441450.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/34961120.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/88544074.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/50441450.jpg)
 
 ### 设备升级
 
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/55741308.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/55741308.jpg)
 Reboot后要n y
 
 
@@ -146,15 +146,15 @@ Reboot后要n y
 无分片转发：成功率较低，保证数据完整
 存储转发：查看帧的全部字段  ，存储后转发，对于qos支持好
 
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/25536444.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/25536444.jpg)
 例子：
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/98221752.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/98221752.jpg)
 Pc-a 要和pc-c通信 
 a通过广播的形式到交换机接口，交换机学习到a的mac地址 所属vlan 
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/32989956.jpg)
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/69428282.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/32989956.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/69428282.jpg)
 c接受到泛洪的数据 回复arp
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/86284366.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/86284366.jpg)
 以下三个监听协议协助泛洪：增强转发组播效率
 IGMP snooping
 IGMP snooping proxy
@@ -163,27 +163,27 @@ CGMP
 ### STP原理与配置
 
 [生成树协议动画](https://youyefu.github.io/2018/05/31/STP%E7%94%9F%E6%88%90%E6%A0%91%E5%8D%8F%E8%AE%AE%E5%8A%A8%E7%94%BB%E6%BC%94%E7%A4%BA.html)
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/35113339.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/35113339.jpg)
 
 多条路径可走：如果两个交换机 连了两根线，其中没有配置stp 泛洪的流量会来回跑，形成环路，变成广播风暴
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/36290261.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/36290261.jpg)
 
  Ieee 控制层面协议
 802.1d  stp 平时不用
 802.1w rstp 快速生成树 收敛速度快
 802.1s mstp/mist/mst 多进程生成树
 产生的报文叫BPDU
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/90194617.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/90194617.jpg)
  
 产生风暴最明显的特征是一个mac出现对应了多个端口
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/53015607.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/53015607.jpg)
 ```flow
 生成树关注三点
 1如何确保阻塞的是不重要的路径
 2如何确保网络是通的
 3如果之前的线路有问题，怎么高校的切换路径
 ```
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/11150174.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/11150174.jpg)
 
 跟桥（根交换机）：树根只有一个
 根与非根的路径是根端口
@@ -195,7 +195,7 @@ BPDU有两类
  
 802.3|BPDU|
 
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/61054400.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/61054400.jpg)
 
 Root id:根网桥的标识符
 2byte优先级字段 0-35535
@@ -209,7 +209,7 @@ Stp过程
 4 learning 同上 且接收数据可以基于源mac地址进行mac地址表项的学习
 5 forwarding 可以任意收发数据流量 bpdu mac表项
 
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/37797412.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/37797412.jpg)
 
 1选跟桥 bid mac
 2根端口 rid cop bid pid 自身pid
@@ -219,9 +219,9 @@ RSTP 原理和配置
 Stp是整体性收敛协议 RSTP两台交换机之间分段收敛 
 非指定端口分为backup 和alternate 
 RSTP边缘端口：
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/60335.jpg)
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/42773626.jpg)
-![](http://p94dvrayw.bkt.clouddn.com/18-5-31/3671235.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/60335.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/42773626.jpg)
+![](https://youyefu-1251686655.cos.ap-beijing.myqcloud.com/18-5-31/3671235.jpg)
 Stp root p设置主根桥
 Stp root s 设置备份跟桥
 Stp port p设置主根端口
