@@ -55,7 +55,7 @@ sns:
   weibo: '//weibo.com/1934846585'
   github: '//github.com/youyefu'
   instagram: '//music.163.com/#/playlist?id=62269796'
-  email: '//@tencent://message/?Menu=yes&uin=95804496'
+  email: '/@tencent://message/?Menu=yes&uin=95804496'
 
 # Tags 设置标签
 recommend-tags: true # whether or not display recommend-tags on the sidebar
