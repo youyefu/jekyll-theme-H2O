@@ -2,7 +2,7 @@
 title: 'Yuri の personal blog'
 description: '随便写写'
 keyword: ' '
-url: 'http://youyefu.top' # your host
+url: 'https://youyefu.github.io' # your host
 
 # if you don't need baseurl, you should leave this value blank.
 baseurl: ''
@@ -55,7 +55,7 @@ sns:
   weibo: '//weibo.com/1934846585'
   github: '//github.com/youyefu'
   instagram: '//music.163.com/#/playlist?id=62269796'
-  email: '//youyefu.top/qq.html'
+  email: '//youyefu.github.io/qq.html'
 
 # Tags 设置标签
 recommend-tags: true # whether or not display recommend-tags on the sidebar
